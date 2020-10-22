@@ -1,5 +1,7 @@
 package com.its.kotlin_koin_sample
 
+import androidx.lifecycle.ViewModel
+
 class Student(val course: SchoolCourse, val friend: Friend) {
 
 
@@ -19,5 +21,11 @@ class SchoolCourse() {
 class Friend() {
     fun hangout() {
         print("we're hanging out")
+    }
+}
+
+class MainViewModel (val course: SchoolCourse, val friend: Friend): ViewModel(){
+    fun performActtion(){
+
     }
 }

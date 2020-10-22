@@ -1,6 +1,7 @@
 package com.its.kotlin_koin_sample
 
 
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.definition.Kind
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -14,4 +15,9 @@ val appModule: Module = module {
 
     // Define a factory create new instance every time
     factory { Student(get() , get()) }
+}
+
+val viewmodelModule : Module = module {
+
+    viewModel { MainViewModel(get() , get())  }
 }

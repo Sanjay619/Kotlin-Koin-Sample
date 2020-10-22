@@ -1,6 +1,7 @@
 package com.its.kotlin_koin_sample
 
 import android.app.Application
+import androidx.lifecycle.ViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -11,7 +12,7 @@ class MyApp : Application(){
 
         startKoin {
             androidContext(this@MyApp)
-            modules(listOf(appModule))
+            modules(listOf(appModule , viewmodelModule))
         }
     }
 }
